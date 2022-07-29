@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-
-const style = StyleSheet.create({
-    tabDefaults: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-});
+import { style } from '../styles'
 
 export function GroupScreen() {
     return (
