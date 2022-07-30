@@ -4,76 +4,6 @@ import { ListItem, Avatar } from "@rneui/themed";
 
 import { style } from '../styles'
 
-const list = [
-  {
-    name: '2022-07-30 14:09:51',
-    subtitle: '221.7' + ' V',
-    sub2: '1.5' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-  {
-    name: '2022-07-27 13:04:05',
-    subtitle: '219.2' + ' V',
-    sub2: '3.7' + ' A'
-  },
-];
-
-
-
 export function LogsScreen() {
   const [isLoading, setLoading] = useState(true);
   var [data, setData] = useState([]);
@@ -95,22 +25,34 @@ export function LogsScreen() {
     );
   } else { console.log(data);
     return(
+      <ScrollView>
       <View>
-        <ScrollView>
-        {
-          list.map((l, i) => (
-            <ListItem key={i} bottomDivider>
+        {data.logs.map((l, i) => (
+          <View>
+            <ListItem key={i} >
+              <ListItem.Title>{data.logs[i].date}</ListItem.Title>
+            </ListItem>
+            <ListItem key={i} >
               <Avatar source={ require('../../assets/lightning.png') } />
               <ListItem.Content>
-                <ListItem.Title>{l.name}</ListItem.Title>
-                <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
-                <ListItem.Subtitle>{l.sub2}</ListItem.Subtitle>
+                <ListItem.Subtitle>{ 'Tensão Média: ' + data.logs[i].voltage.med.toString() + ' V' }</ListItem.Subtitle>
+                <ListItem.Subtitle>{ 'Tensão Mínima: ' + data.logs[i].voltage.min.toString() + ' V' }</ListItem.Subtitle>
+                <ListItem.Subtitle>{ 'Tensão Máxima: ' + data.logs[i].voltage.max.toString() + ' V' }</ListItem.Subtitle>
               </ListItem.Content>
             </ListItem>
-          ))
-        }
+
+            <ListItem key={i} bottomDivider>
+              <Avatar source={ require('../../assets/current.png') } />
+              <ListItem.Content>
+                <ListItem.Subtitle>{ 'Corrente Média: ' + data.logs[i].current.med.toString() + ' A' }</ListItem.Subtitle>
+                <ListItem.Subtitle>{ 'Corrente Mínima: ' + data.logs[i].current.min.toString() + ' A' }</ListItem.Subtitle>
+                <ListItem.Subtitle>{ 'Corrente Máxima: ' + data.logs[i].current.max.toString() + ' A' }</ListItem.Subtitle>
+              </ListItem.Content>
+            </ListItem>
+          </View>
+        ))}
+        </View>
         </ScrollView>
-      </View>
     );
   }
 }
