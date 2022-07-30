@@ -3,10 +3,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { LogsScreen } from './tabs/logsScreen'
-import { GroupScreen } from './tabs/groupScreen'
-import { GraphScreen } from './tabs/graphScreen'
-import { HomeScreen } from './tabs/homeScreen';
+import { LogsScreen } from './src/tabs/logsScreen';
+import { GroupScreen } from './src/tabs/groupScreen';
+import { GraphScreen } from './src/tabs/graphScreen';
+import { HomeScreen } from './src/tabs/homeScreen';
 
 
 const Tab = createBottomTabNavigator();

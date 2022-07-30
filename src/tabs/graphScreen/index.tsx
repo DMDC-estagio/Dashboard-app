@@ -1,27 +1,16 @@
 import * as React from 'react';
 import { Text, View, Dimensions } from 'react-native';
 import { LineChart } from "react-native-chart-kit";
+import {DATA} from '../styles'
+
+
 
 export function GraphScreen() {
     return (
         <View>
         <Text>Bezier Line Chart</Text>
         <LineChart
-          data={{
-            labels: ["January", "February", "March", "April", "May", "June"],
-            datasets: [
-              {
-                data: [
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100
-                ]
-              }
-            ]
-          }}
+          data={ DATA }
           width={Dimensions.get("window").width} // from react-native
           height={220}
           yAxisLabel="$"
