@@ -4,8 +4,12 @@ export const style = StyleSheet.create({
     tabDefaults: {
       flex: 1,
       justifyContent: 'center',
-      //alignItems: 'center'
     },
+    loadingScreen: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
 });
 
 export const DATA = {
