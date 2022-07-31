@@ -20,5 +20,5 @@ This projects stills in development:
 - [x] Create home tab
 - [x] Create log tab
 - [x] Add HTTP-get support
+- [x] Create group tab
 - [ ] Create graphs tab
-- [ ] Create group tab
