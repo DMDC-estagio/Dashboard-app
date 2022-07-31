@@ -30,7 +30,7 @@ export function LogsScreen() {
         {data.logs.map((l, i) => (
           <View>
             <ListItem key={i} >
-              <ListItem.Title>{data.logs[i].date}</ListItem.Title>
+              <ListItem.Title style={ {fontWeight: 'bold'} }>{data.logs[i].date}</ListItem.Title>
             </ListItem>
             <ListItem key={i} >
               <Avatar source={ require('../../assets/lightning.png') } />
