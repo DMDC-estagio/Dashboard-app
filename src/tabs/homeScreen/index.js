@@ -4,7 +4,7 @@ import BeautifulHorizontalList from "react-native-beautiful-horizontal-list";
 
 import { style } from '../styles'
 
-function getData(data: any, type: string){
+function getData(data, type){
   var recValues = {
     vmed: data.logs[0].voltage.med.toFixed(1),
     vmax: data.logs[0].voltage.max.toFixed(1),
@@ -12,7 +12,7 @@ function getData(data: any, type: string){
     cmax: data.logs[0].current.max.toFixed(1)
   }
   
-  function colorPicker(value: number, type: string) {
+  function colorPicker(value, type) {
     if (type === 'voltage') {
       if(value > 229 || value < 200) { return "#f73a4d" }
       else { return "#16c402" }
@@ -24,7 +24,7 @@ function getData(data: any, type: string){
     }
   }
   
-  function descPicker(value: number, type: string) {
+  function descPicker(value, type) {
     if (type === 'voltage') {
       if(value > 229) { return "Tensão Alta" }
       else if(value < 200) { return "Tensão Baixa" }
