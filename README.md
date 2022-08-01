@@ -21,5 +21,5 @@ This projects stills in development:
 - [x] Create log tab
 - [x] Add HTTP-get support
 - [x] Create group tab
-- [ ] Create graphs tab
+- [x] Create graphs tab
 - [ ] Improve overall look n` feel
