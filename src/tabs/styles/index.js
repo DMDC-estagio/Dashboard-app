@@ -11,19 +11,3 @@ export const style = StyleSheet.create({
       alignItems: 'center'
     }
 });
-
-export const DATA = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  datasets: [
-    {
-      data: [
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100
-      ]
-    }
-  ]
-}
