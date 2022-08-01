@@ -8,7 +8,7 @@ const listInfo = [
   { name: "Prof. Clóvis Petry",
     avatarUrl: "https://yt3.ggpht.com/ytc/AKedOLQUQewMtBXCQ4-Sh-6It2Qgol6hQHBaVJugvEINMQ=s900-c-k-c0x00ffffff-no-rj",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-    { name: "Gabriel Gonçalves Novalski",
+    { name: "Gabriel Gonçalves",
     avatarUrl: "https://avatars.githubusercontent.com/u/99911394?v=4",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     gthb: "@gab5987" },
