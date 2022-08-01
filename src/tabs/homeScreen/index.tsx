@@ -6,10 +6,10 @@ import { style } from '../styles'
 
 function getData(data: any, type: string){
   var recValues = {
-    vmed: data.logs[0].voltage.med,
-    vmax: data.logs[0].voltage.max,
-    cmed: data.logs[0].current.med,
-    cmax: data.logs[0].current.max
+    vmed: data.logs[0].voltage.med.toFixed(1),
+    vmax: data.logs[0].voltage.max.toFixed(1),
+    cmed: data.logs[0].current.med.toFixed(1),
+    cmax: data.logs[0].current.max.toFixed(1)
   }
   
   function colorPicker(value: number, type: string) {
