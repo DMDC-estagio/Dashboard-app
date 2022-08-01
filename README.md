@@ -22,3 +22,4 @@ This projects stills in development:
 - [x] Add HTTP-get support
 - [x] Create group tab
 - [ ] Create graphs tab
+- [ ] Improve overall look n` feel
