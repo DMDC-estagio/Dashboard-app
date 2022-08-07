@@ -7,8 +7,11 @@ import { style } from '../styles'
 function getData(data, type){
   var recValues = {
     vmed: data.logs[0].voltage.med.toFixed(1),
+    vmin: data.logs[0].voltage.min.toFixed(1),
     vmax: data.logs[0].voltage.max.toFixed(1),
+
     cmed: data.logs[0].current.med.toFixed(1),
+    cmin: data.logs[0].current.min.toFixed(1),
     cmax: data.logs[0].current.max.toFixed(1)
   }
   
@@ -52,6 +55,13 @@ function getData(data, type){
       primaryColor: colorPicker(recValues.vmax, "voltage"),
       imageSource: require('../../assets/lightning.png')
     },
+    {
+      title: "Tensão Miníma",
+      value: recValues.vmin.toString() + " V",
+      unit: descPicker(recValues.vmin, "voltage"),
+      primaryColor: colorPicker(recValues.vmin, "voltage"),
+      imageSource: require('../../assets/lightning.png')
+    },
   ];
   
   var currentArr = [
@@ -67,6 +77,13 @@ function getData(data, type){
       value: recValues.cmax.toString() + " A",
       unit: descPicker(recValues.cmax, "current"),
       primaryColor: colorPicker(recValues.cmax, "current"),
+      imageSource: require('../../assets/current.png')
+    },
+    {
+      title: "Corrente Mínima",
+      value: recValues.cmin.toString() + " A",
+      unit: descPicker(recValues.cmin, "current"),
+      primaryColor: colorPicker(recValues.cmin, "current"),
       imageSource: require('../../assets/current.png')
     },
   ];
@@ -95,9 +112,13 @@ export function HomeScreen() {
   } else {
     return (
       <View style={ style.tabDefaults }>
-        <StatusBar  barStyle="dark-content" translucent={true} />
-          <BeautifulHorizontalList data={ getData(data, "voltage") } />
-          <BeautifulHorizontalList data={ getData(data, "current") } />
+          <StatusBar  barStyle="dark-content" translucent={true} />
+            <BeautifulHorizontalList style={ {padding: 17} } data={ getData(data, "voltage") } />
+
+            <BeautifulHorizontalList style={ {padding: 17} }data={ getData(data, "current") } />
+            {/* <View style={{alignItems: "center" }}>
+              <Text >  </Text>
+            </View> */}
       </View>
     );
   }
