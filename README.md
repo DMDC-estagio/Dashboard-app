@@ -41,4 +41,4 @@ This projects stills in development:
 - [x] Add HTTP-get support
 - [x] Create group tab
 - [x] Create graphs tab
-- [ ] Improve overall look n` feel
+- [x] Improve overall look n` feel
